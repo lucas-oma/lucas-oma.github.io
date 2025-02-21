@@ -1,6 +1,6 @@
-import LinkedInIcon from '@/components/icons/LinkedInIcon'
-import GithubIcon from '@/components/icons/GithubIcon'
-import EmailIcon from '@/components/icons/EmailIcon'
+import LinkedInIcon from '../components/icons/LinkedinIcon.astro'
+import GithubIcon from '../components/icons/GithubIcon.astro'
+import EmailIcon from '../components/icons/EmailIcon.astro'
 
 // ADD YOUR SOCIAL NETWORKS HERE
 export const SOCIALNETWORKS = [
