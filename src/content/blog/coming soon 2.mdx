@@ -1,0 +1,75 @@
+---
+title: Coming Soon
+description: >-
+  The Elden Ring is shattered, and the lands lie in ruin. A Tarnished rises, guided by grace, to claim their fate.
+pubDate: 2025-02-20T14:00:00.000Z
+heroImage: ../../assets/images/banner.jpg
+category: Coming Soon
+tags:
+  - Elden Ring
+  - Tarnished
+  - Grace
+  - Souls-like
+---
+
+# A World Fractured
+
+The Golden Order has crumbled, and chaos reigns. Scattered throughout the Lands Between, great warriors seek to restore, or break, the balance of power.
+
+## The Tarnished’s Journey
+
+Guided by the fading light of grace, the Tarnished sets forth. Will you seek the throne, or cast the world into shadow?
+
+```html
+---
+const fate = 'uncertain'
+---
+
+<div>
+	<h1>The path before you is {fate}...</h1>
+	<!-- Outputs <h1>The path before you is uncertain...</h1> -->
+</div>
+```
+
+## Echoes of the Erdtree
+Once, the Erdtree bathed the world in light. Now, only embers remain, and its roots grow ever darker.
+
+```html
+---
+const whisper = 'faint'
+---
+
+<p>The echoes of the past are {whisper}...</p>
+<!-- Outputs <p>The echoes of the past are faint...</p> -->
+```
+
+## The Mark of the Tarnished
+Those who bear the mark of the Tarnished walk a path riddled with uncertainty. Some embrace their fate, while others curse the gods who abandoned them.
+
+```html
+---
+const tarnished = true
+---
+
+{tarnished && <p>The mark upon you glows dimly...</p>}
+
+{tarnished ? <p>The grace guides you still...</p> : <p>The light fades from your path.</p>}
+```
+
+## Relics of a Bygone Age
+Weapons of forgotten heroes and lost kings still linger, buried beneath the ruins of old kingdoms.
+
+```html
+---
+const inscription = '<p>The runes tell of a time before the shattering...</p>'
+---
+
+<Fragment set:html={inscription} />
+```
+
+## A Lord’s Burden
+The throne stands empty, and the realm awaits its new ruler. Will you claim your place as Elden Lord, or bring ruin upon all?
+
+```
+<p>“Rise, Tarnished, and be guided by grace.” — Melina</p>
+```

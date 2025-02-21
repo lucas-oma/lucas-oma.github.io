@@ -1,0 +1,79 @@
+---
+title: Coming Soon
+description: >-
+  The Age of Fire is nearing its end. As the First Flame dwindles, only the Ashen 
+  One can decide its fate, rekindle the light or embrace the darkness.
+pubDate: 2025-02-19T22:00:00.000Z
+heroImage: ../../assets/images/bg.jpg
+category: Coming Soon
+tags:
+  - Souls-like
+  - Lore
+  - Hollowing
+---
+
+# A World in Ruin
+
+The great kingdoms have fallen, their lords reduced to embers. Ashen ones, unkindled and forgotten, rise once more. Whether to restore the First Flame or usher in eternal darkness, their path is uncertain.
+
+## The Journey Ahead
+
+The path winds through ruins long abandoned, where whispers of old gods echo through the dark. Shadows lurk, awaiting those who dare venture forward.
+
+```html
+---
+const fate = 'uncertain'
+---
+
+<div>
+	<h1>Your destiny remains {fate}...</h1>
+	<!-- Outputs <h1>Your destiny remains uncertain...</h1> -->
+</div>
+```
+
+## A Fading Light
+
+The embers flicker, barely clinging to existence. Those who seek power must tread carefully, for the darkness is ever patient.
+
+```html
+---
+const relic = 'Cursed Blade'
+---
+
+<h1>The {relic} trembles in your grasp.</h1>
+```
+
+## The Hollowing Begins
+
+Many have sought purpose, only to lose themselves to the curse. The question remains—will you?
+
+```html
+---
+const hollowed = true
+---
+
+{hollowed && <p>You have lost your way...</p>}
+
+{hollowed ? <p>The darkness consumes all...</p> : <p>A flicker of hope remains.</p>}
+```
+
+## Echoes of the Past
+
+Long forgotten relics hold the whispers of those who came before. Their voices may guide or mislead, for history is a fragile thing.
+
+```html
+---
+const ancientText = '<p>The fire fades, and the lords go without thrones...</p>'
+---
+
+<Fragment set:html={ancientText} />
+```
+
+## The Final Choice
+
+As the journey nears its end, only one truth remains—fate is in your hands.
+
+```html
+<p>“Let’s make this a new, wonderful Age of Dark.” — Kaathe, the Primordial Serpent</p>
+```
+---

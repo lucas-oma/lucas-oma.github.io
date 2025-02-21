@@ -1,0 +1,18 @@
+---
+import Title from './Title.astro'
+import Shape from './icons/Shape.astro'
+type Props = {
+	title: string | undefined
+	shortName: string | undefined
+}
+
+import { siteConfig } from '@/site-config'
+
+const { title, shortName } = Astro.props
+const welcome = title == siteConfig.title
+---
+
+<div class='flex justify-start items-center gap-2 title'>
+	<Shape />
+	<Title>{welcome? 'Welcome to ':''}{title}</Title> {shortName ? <a href="/about-me">by {shortName}</a> : <></>}
+</div>
