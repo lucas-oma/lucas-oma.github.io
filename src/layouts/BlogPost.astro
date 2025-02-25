@@ -5,6 +5,10 @@ import BaseLayout from '@/layouts/BaseLayout'
 import Tag from '@/components/Tag'
 import type { MarkdownHeading } from 'astro'
 import { Image } from 'astro:assets'
+import CommentSection from '@/components/CommentSection'
+import PageViews from '@/components/PageViews'
+
+const pageUrl = new URL(Astro.url.pathname, Astro.url.origin).href;
 
 type Props = {
 	id: CollectionEntry<'blog'>['id']
@@ -45,7 +49,7 @@ const articleDate = pubDate.toISOString()
 				{tags.map((tag) => <Tag tag={tag} />)}
 			</div>
 		</header>
-
+		<PageViews url={pageUrl}, margin="r" />
 		<>
 			{
 				heroImage && (
@@ -69,6 +73,7 @@ const articleDate = pubDate.toISOString()
 			<slot />
 		</div>
 	</article>
+	<CommentSection />
 </BaseLayout>
 
 <script>

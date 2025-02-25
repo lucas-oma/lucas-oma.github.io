@@ -2,6 +2,9 @@
 import BaseLayout from '@/layouts/BaseLayout'
 import { profileData } from '@/data/profile'
 import { SOCIALNETWORKS } from '@/data/links'
+import PageViews from '@/components/PageViews'
+
+const pageUrl = new URL(Astro.url.pathname, Astro.url.origin).href;
 
 const { name, avatar, resumeLink, publications, projects } = profileData
 ---
@@ -91,4 +94,8 @@ const { name, avatar, resumeLink, publications, projects } = profileData
       ))}
     </ul>
   </section>
+
+  <PageViews url={pageUrl}, margin="c" />
+
+
 </BaseLayout>
