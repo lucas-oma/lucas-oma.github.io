@@ -16,7 +16,7 @@ interface ProfileData {
 
 export const profileData = {
   name: "Lucas O. Martinez",
-  avatar: "/src/assets/images/profile-pic.jpg",
+  avatar: "/media/images/profile-pic.jpg",
   resumeLink: "/media/pdf/Lucas_Martinez_Resume.pdf",
   publications: [
     {
