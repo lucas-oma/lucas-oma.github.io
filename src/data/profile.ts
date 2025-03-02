@@ -16,7 +16,7 @@ interface ProfileData {
 
 export const profileData = {
   name: "Lucas O. Martinez",
-  avatar: "https://media.licdn.com/dms/image/v2/D5635AQGzfVIIkQMZdQ/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1734600491079?e=1740708000&v=beta&t=ku25OABzGcXZt4sRJ8PmFet4JoTpQWeZH79mLn6YG5M",
+  avatar: "/src/assets/images/profile-pic.jpg",
   resumeLink: "/media/pdf/Lucas_Martinez_Resume.pdf",
   publications: [
     {
