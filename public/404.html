@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
                 margin: 0;
@@ -11,7 +12,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                overflow: hidden;
+                overflow: hidden; /* Hides horizontal and vertical overflow */
                 flex-direction: column;
                 text-align: center;
             }
@@ -20,10 +21,11 @@
                 position: absolute;
                 top: 10%;
                 color: #fff;
+                font-size: 2vw;
             }
 
             h1 {
-                font-size: 50px;
+                font-size: 5vw;
                 margin-bottom: 10px;
             }
 
@@ -36,14 +38,16 @@
                 animation: starTwinkle 3s infinite linear;
             }
 
-            /* 🚀 Moved astronaut higher and made it unselectable */
+            /* 🚀 Fixed Astronaut: Prevents expanding screen */
             .astronaut img {
-                width: 100px;
+                width: 15vw;
+                max-width: 120px;
                 position: absolute;
-                top: 40%;
+                top: 35vh;
+                left: -15vw; /* Starts slightly off-screen */
                 animation: astronautFly 17s infinite linear;
-                user-select: none;  /* Prevents selection */
-                pointer-events: none; /* Prevents interaction */
+                user-select: none;
+                pointer-events: none;
             }
 
             .home-button {
@@ -51,8 +55,8 @@
                 top: 65%;
                 background-color: #ffffff;
                 color: #2e1753;
-                padding: 10px 20px;
-                font-size: 18px;
+                padding: 1vw 3vw;
+                font-size: 1.5vw;
                 font-weight: bold;
                 border: none;
                 border-radius: 5px;
@@ -66,24 +70,25 @@
                 transform: scale(1.1);
             }
 
+            /* 🚀 Fixed Astronaut Animation */
             @keyframes astronautFly {
                 0% {
-                    left: -100px;
+                    left: -15vw; /* Starts just outside the screen */
                 }
                 25% {
-                    top: 35%;
+                    top: 30vh;
                     transform: rotate(30deg);
                 }
                 50% {
                     transform: rotate(45deg);
-                    top: 40%;
+                    top: 35vh;
                 }
                 75% {
-                    top: 45%;
+                    top: 40vh;
                     transform: rotate(30deg);
                 }
                 100% {
-                    left: 110%;
+                    left: 100vw; /* Stops at the screen edge instead of going beyond */
                     transform: rotate(45deg);
                 }
             }
@@ -103,6 +108,30 @@
                 }
                 100% {
                     background: rgba(255, 255, 255, 0.4);
+                }
+            }
+
+            /* 📱 Mobile-Friendly Adjustments */
+            @media (max-width: 768px) {
+                .text {
+                    font-size: 4vw;
+                }
+
+                h1 {
+                    font-size: 8vw;
+                }
+
+                .astronaut img {
+                    width: 25vw;
+                    max-width: 100px;
+                    top: 30vh;
+                    left: -20vw; /* Prevents screen expansion */
+                }
+
+                .home-button {
+                    top: 65%;
+                    font-size: 3vw;
+                    padding: 2vw 5vw;
                 }
             }
         </style>
