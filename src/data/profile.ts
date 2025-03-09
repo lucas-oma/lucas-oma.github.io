@@ -75,7 +75,7 @@ export const profileData: ProfileData = {
       description: "Investigated traditional and embedding-based regression techniques on Supreme Court decisions and LinkedIn job descriptions.",
       keywords: "Text regression, Embeddings, TF-IDF, SVR, MLP, LLM, BERT",
       pdf: "/media/pdf/Regression_with_Text_Features.pdf",
-      github: undefined,
+      github: "https://github.com/apeterson7/cs2565-project",
       date: "2024-12-13"
     },
     {
@@ -83,7 +83,7 @@ export const profileData: ProfileData = {
       description: "Experimented with NeRF improvements through architectural changes, loss functions, and contrast adjustments for better 3D scene reconstruction.",
       keywords: "NeRF, 3D Reconstruction, Deep Learning, Computer Vision, Model Optimization",
       pdf: "/media/pdf/Exploring_NeRF-report.pdf",
-      github: undefined,
+      github: "https://github.com/lucas-oma/exploring_NeRF",
       date: "2024-05-09"
     },
     {
