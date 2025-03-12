@@ -128,20 +128,3 @@ const articleDate = pubDate.toISOString()
 	fnObserver()
 	document.addEventListener('astro:after-swap', fnObserver)
 </script>
-
-
-<script type="text/javascript">
-	window.MathJax = {
-	  tex: {
-		inlineMath: [['$', '$']],
-		displayMath: [['$$', '$$']]
-	  },
-	  svg: { fontCache: 'global' }
-	};
-  
-	document.addEventListener("astro:after-swap", () => {
-	  if (window.MathJax && window.MathJax.typesetPromise) {
-		window.MathJax.typesetPromise();
-	  }
-	});
-  </script>
