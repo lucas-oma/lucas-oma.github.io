@@ -360,9 +360,13 @@ Lets break it down:
 ---
 
 ## Wrapping Up
+
 ✅ CNNs are (mainly) composed of convolution, activation, and pooling layers.
+
 ✅ Activation functions (eg. ReLU) make CNNs non-linear and powerful.
+
 ✅ Pooling layers help downsample feature maps efficiently. 
+
 ✅ Fully connected layers process learned features for classification.
 
 By combining these elements, CNNs efficiently learn hierarchical representations of images, making them the foundation of modern computer vision tasks. 🚀  
