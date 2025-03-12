@@ -1,7 +1,7 @@
 ---
 title: "CNN: Convolutional Neural Networks"
 description: >-
-  The Elden Ring is shattered, and the lands lie in ruin. A Tarnished rises, guided by grace, to claim their fate.
+  Everything you need to know about CNNs: explained simply! Ever wondered how machines "see" images? We break down convolutions, the magic behind CNNs, in the clearest way possible. Here you'll find everything you need to master CNNs!
 pubDate: 2025-03-11T14:00:00.000Z
 heroImage: ../../assets/images/theory/CNN/banner.png
 category: Theory
@@ -370,5 +370,7 @@ By combining these elements, CNNs efficiently learn hierarchical representations
 ---
 
 > Congratulations 🎉, you've just mastered a technology that dates back to the previous century! 😅 But hey, that doesn’t mean CNNs are outdated. In fact, they dominated the field until transformers took the spotlight in 2017. Plus, the concept of convolution is still relevant today, even playing a role in Vision Transformers (ViTs). And if you think old stuff isn't any good, just remember backpropagation itself has roots in ideas developed by Newton!
+
+— *Lucas Martinez*  
 
 ---
