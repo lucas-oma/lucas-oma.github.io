@@ -114,4 +114,7 @@ const counterUrl = import.meta.env.DEV ? '' :
   }
 
   updateViewCount();
+  document.addEventListener("astro:after-swap", () => {
+    updateViewCount();
+  });
 </script>
