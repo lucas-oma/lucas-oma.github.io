@@ -149,9 +149,9 @@ For example, instead of using a 5 $\times$ 5 kernel, we can stack two 3 $\times$
 ### Bringing It All Together
 Padding and stride work together to control the spatial resolution of feature maps throughout a CNN. Choosing the right combination depends on the trade-off between computational cost and information retention:
 
-- More padding → Retains more spatial information.
-- Higher stride → Reduces computational load but can discard details.
-- Combination of both → Maintains a balance.
+- More padding $\rightarrow$ Retains more spatial information.
+- Higher stride $\rightarrow$ Reduces computational load but can discard details.
+- Combination of both $\rightarrow$ Maintains a balance.
 
 
 In practice, architectures like VGGNet and ResNet rely on small kernels (mostly 3 $\times$ 3) with stride 1 and same padding, ensuring that deeper layers capture fine-grained details.
@@ -266,7 +266,7 @@ Despite these variations, **ReLU remains the default activation function in most
 ### Pooling: Reducing Spatial Dimensions
 While convolutional layers reduce spatial resolution (height and width), the reduction is often minimal, just a few pixels per layer (except when using a stride greater than 1). This means that deeper layers can still produce large feature maps. However, we often want to **downsample** these feature maps to:
 
-- Reduce computational cost (fewer pixels → fewer computations).
+- Reduce computational cost (fewer pixels $\rightarrow$ fewer computations).
 - Extract dominant features while discarding redundant spatial details. For example, imagine zooming into an image of a cat: many contiguous pixels will be very similar or even identical. Keeping all of them is unnecessary; instead, pooling can select the most representative value, allowing the network to retain essential information while reducing computational cost.
 
 This is where **pooling layers** come in. Pooling layers apply a **pooling window** that slides across the input feature map and applies a function to produce a **single scalar value per region**.
@@ -298,7 +298,7 @@ Now that we've covered **convolution, activation functions, and pooling**, let's
 A typical **Convolutional Neural Network (CNN)** follows this sequence (with slight variations):
 
 $$
-\text{Input Image → Conv → ReLU → Pooling → Conv → ReLU → Pooling → Fully Connected Layer → Output}
+\text{Input Image $\rightarrow$ Conv $\rightarrow$ ReLU $\rightarrow$ Pooling $\rightarrow$ Conv $\rightarrow$ ReLU $\rightarrow$ Pooling $\rightarrow$ Fully Connected Layer $\rightarrow$ Output}
 $$
 
 Lets look once again at this image:
@@ -323,7 +323,7 @@ Lets break it down:
 
 3. First Subsampling (Pooling) Layer (S2: 6 feature maps of 14×14)
    - Operation: Average Pooling
-   - Pooling Window: $2 \times 2$ with Stride 2 → Halves the size
+   - Pooling Window: $2 \times 2$ with Stride 2 $\rightarrow$ Halves the size
    - Output: $6 \times 14 \times 14$
 
 4. Second Convolutional Layer (C3: 16 feature maps of 10×10)
@@ -336,7 +336,7 @@ Lets break it down:
 
 5. Second Subsampling (Pooling) Layer (S4: 16 feature maps of 5×5)
    - Operation: Average Pooling
-   - Pooling Window: $2 \times 2$ with Stride 2 → Halves the size
+   - Pooling Window: $2 \times 2$ with Stride 2 $\rightarrow$ Halves the size
    - Output: $16 \times 5 \times 5$
 
 6. Fully Connected Layer (C5: 120 neurons)

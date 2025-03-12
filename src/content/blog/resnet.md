@@ -140,7 +140,7 @@ Below we can see a residual block to the left, and a **bottleneck residual block
 
 ![Bottleneck Residual Block](../../assets/images/theory/resnet/bottleneck_resblock.png)
 
-- The first $1 \times 1$ convolution reduces the number of channels → fewer computations for the $3 \times 3$ convolution.
+- The first $1 \times 1$ convolution reduces the number of channels $\rightarrow$ fewer computations for the $3 \times 3$ convolution.
 - The last $1 \times 1$ convolution brings back the original number of channels.
 - This makes deeper ResNets much more efficient while maintaining their power.
 
@@ -196,13 +196,13 @@ Because it is well known that once a network reaches **50+ layers**, performing 
 
 ResNet was a **turning point** in deep learning. Before its introduction, training **very deep networks** was nearly impossible due to **vanishing gradients and degradation problems**. By introducing **Residual Learning**, ResNet made it possible to train **much deeper networks** without suffering from these issues.  
 
-✅ **Solved vanishing gradients** → Deep networks became trainable. 
+✅ **Solved vanishing gradients** $\rightarrow$ Deep networks became trainable. 
 
-✅ **Introduced skip connections** → Enabled gradient flow, stabilizing optimization. 
+✅ **Introduced skip connections** $\rightarrow$ Enabled gradient flow, stabilizing optimization. 
 
-✅ **Allowed deeper models** → ResNet-50, ResNet-101, and beyond became practical.  
+✅ **Allowed deeper models** $\rightarrow$ ResNet-50, ResNet-101, and beyond became practical.  
 
-✅ **Still used in modern architectures** → Many recent models build on ResNet’s foundations.
+✅ **Still used in modern architectures** $\rightarrow$ Many recent models build on ResNet’s foundations.
 
 Even after (almost) a decade since its introduction, ResNet's principles remain fundamental in deep learning, powering some of the most widely used architectures for image classification, object detection, and segmentation.
 
