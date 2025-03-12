@@ -132,13 +132,16 @@ const articleDate = pubDate.toISOString()
 
 <script type="text/javascript">
 	window.MathJax = {
-	tex: {
+	  tex: {
 		inlineMath: [['$', '$']],
 		displayMath: [['$$', '$$']]
-	},
-	svg: { fontCache: 'global' }
+	  },
+	  svg: { fontCache: 'global' }
 	};
-</script>
-
-
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+	document.addEventListener("astro:after-swap", () => {
+	  if (window.MathJax && window.MathJax.typesetPromise) {
+		window.MathJax.typesetPromise();
+	  }
+	});
+  </script>
