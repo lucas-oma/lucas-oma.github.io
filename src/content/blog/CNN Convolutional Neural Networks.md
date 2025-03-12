@@ -17,9 +17,9 @@ tags:
 
 ## The birth of CNNs
 
-In 1989, Yann LeCun and his colleagues introduced the LeNet-1 architecture in the [Backpropagation Applied to Handwritten Zip Code Recognition](https://ieeexplore.ieee.org/document/6795724) paper. But this was just the beginning of what would go on to revolutionize deep learning and computer vision.
+In 1989, Yann LeCun and his colleagues introduced the LeNet-1 architecture in the <a target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/document/6795724">Backpropagation Applied to Handwritten Zip Code Recognition</a> paper. But this was just the beginning of what would go on to revolutionize deep learning and computer vision.
 
-Throughout the 1990s, LeCun kept refining this architecture. It was during these years that the term **Convolutional Neural Network** became widely adopted by the community. Then, in 1998, he and his peers revealed LeNet-5 to the public in [Gradient-Based Learning Applied to Do cument Recognition](https://ieeexplore.ieee.org/document/726791), a paper that remains one of the most influential in the field today.
+Throughout the 1990s, LeCun kept refining this architecture. It was during these years that the term **Convolutional Neural Network** became widely adopted by the community. Then, in 1998, he and his peers revealed LeNet-5 to the public in <a  target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/document/726791">Gradient-Based Learning Applied to Do cument Recognition</a>, a paper that remains one of the most influential in the field today.
 
 > Convolutional Neural Networks are often called CNN or ConvNets
 
@@ -62,7 +62,7 @@ Okay, this might be getting confusing, but don't worry, I promise it's a really 
 3. Produces one part of the output
 
 ![Convolution GIF](../../assets/images/theory/CNN/convolution.gif)
-> Image source: [Piotr Skalski](https://medium.com/towards-data-science/gentle-dive-into-math-behind-convolutional-neural-networks-79a07dd44cf9)
+> Image source: <a  target="_blank" rel="noopener noreferrer" href="https://medium.com/towards-data-science/gentle-dive-into-math-behind-convolutional-neural-networks-79a07dd44cf9">Piotr Skalski</a>
 
 Simple, right? But did you notice something? **The output image is smaller (Height $\times$ Width) than the input!** Why? Those of you who are really proficient in mathematics might already know the answer just by looking at the equation. But for those who aren't as in love with math (myself included 😝), there's an easier and more intuitive way to understand it.
 
@@ -142,7 +142,7 @@ Different architectures use different combinations of padding and stride, depend
 
 Do you notice how kernel sizes are relatively small? In fact, the 3 $\times$ 3 kernel is the most widely used in modern CNN architectures. This is not just by chance—research has shown that stacking multiple small kernels can achieve the same receptive field as a larger kernel while being more efficient in terms of both computation and parameter count.
 
-For example, instead of using a 5 $\times$ 5 kernel, we can stack two 3 $\times$ 3 kernels sequentially. Both configurations result in a receptive field of 5 $\times$ 5, but the stacked approach introduces non-linearity between the two layers while also reducing the number of parameters! Thus, using smaller kernels reduces computational cost while improving the network’s ability to learn hierarchical representations. This idea was popularized by architectures like VGGNet [(Simonyan & Zisserman, 2014)](https://arxiv.org/abs/1409.1556), which rely exclusively on 3 $\times$ 3 convolutions to build deep networks efficiently.
+For example, instead of using a 5 $\times$ 5 kernel, we can stack two 3 $\times$ 3 kernels sequentially. Both configurations result in a receptive field of 5 $\times$ 5, but the stacked approach introduces non-linearity between the two layers while also reducing the number of parameters! Thus, using smaller kernels reduces computational cost while improving the network’s ability to learn hierarchical representations. This idea was popularized by architectures like VGGNet <a  target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/1409.1556">(Simonyan & Zisserman, 2014)</a>, which rely exclusively on 3 $\times$ 3 convolutions to build deep networks efficiently.
 
 > Whoa, a new term just popped up: **receptive field**! Simply put, this refers to the **region of the input that influences a given output**. In other words, it tells us **how much of the original image a neuron actually "sees" and learns from**. The deeper we go in the network, the larger the receptive field becomes, allowing higher layers to capture more abstract and complex patterns.
  
@@ -272,7 +272,7 @@ While convolutional layers reduce spatial resolution (height and width), the red
 This is where **pooling layers** come in. Pooling layers apply a **pooling window** that slides across the input feature map and applies a function to produce a **single scalar value per region**.
 
 ![Pooling](../../assets/images/theory/CNN/pooling.gif)
-> Image source: [Rafay Qayyum](https://pub.towardsai.net/introduction-to-pooling-layers-in-cnn-dafe61eabe34)
+> Image source: <a  target="_blank" rel="noopener noreferrer" href="https://pub.towardsai.net/introduction-to-pooling-layers-in-cnn-dafe61eabe34">Rafay Qayyum</a>
 
 #### Max Pooling: The Most Common Type
 Max pooling reduces the spatial size by selecting the maximum value from a small region (pooling window) of the feature map. A typical pooling operation uses a $2 \times 2$ window with stride 2, meaning:
