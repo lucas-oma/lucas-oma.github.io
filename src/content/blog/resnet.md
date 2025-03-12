@@ -1,9 +1,9 @@
 ---
 title: The Residual Network (ResNet) 
 description: >-
-  The Elden Ring is shattered, and the lands lie in ruin. A Tarnished rises, guided by grace, to claim their fate.
+  ResNet changed deep learning forever. Before its arrival, training very deep networks was nearly impossible: deep models did not learn! But with a simple yet powerful trick ResNet shattered these barriers. Dive in to discover how ResNet works.
 pubDate: 2025-03-12T00:00:00.000Z
-heroImage: ../../assets/images/theory/resnet/banner.PNG
+heroImage: ../../assets/images/theory/resnet/banner.png
 category: Theory
 tags:
   - Deep Learning
