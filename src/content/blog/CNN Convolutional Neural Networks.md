@@ -277,7 +277,7 @@ This is where **pooling layers** come in. Pooling layers apply a **pooling windo
 #### Max Pooling: The Most Common Type
 Max pooling reduces the spatial size by selecting the maximum value from a small region (pooling window) of the feature map. A typical pooling operation uses a $2 \times 2$ window with stride 2, meaning:
 
-- It takes the maximum value from each $(2 \times 2\)$ patch.
+- It takes the maximum value from each $2 \times 2$ patch.
 - It slides the window by 2 pixels at a time, so every "pixel" is only evaluated once.
 - The output size is reduced by half in each dimension.
 
