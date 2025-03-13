@@ -37,7 +37,7 @@ const { name, avatar, resumeLink, publications, projects } = profileData
     </nav>
 
     <!-- About Me Section-->
-    <section id="about" class="flex flex-col items-center text-center mt-12">
+    <section id="about" class="flex flex-col items-center text-center mt-12 mb-6">
       <img src={avatar} alt={name} class="w-40 h-40 rounded-full shadow-lg mb-4" />
       <h1 class="text-3xl font-bold">{name}</h1>
       <p class="text-sm text-gray-500 dark:text-gray-400">M.S. in Computer Science, AI Concentration - New York University, Courant</p>
@@ -68,6 +68,31 @@ const { name, avatar, resumeLink, publications, projects } = profileData
       </div>
     </section>
 
+    <!-- My Stack -->
+    <!-- <div class="flex flex-col items-center space-y-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+
+        <div class="p-2 flex flex-col items-center bg-gray-800 text-white rounded-md shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-5 h-5 mb-1">
+          <span class="text-xs">Python</span>
+        </div>
+
+        <div class="p-2 flex flex-col items-center bg-gray-800 text-white rounded-md shadow-md">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-5 h-5 mb-1">
+          <span class="text-xs">C++</span>
+        </div>
+        
+        <div class="p-2 flex flex-col items-center bg-gray-800 text-white rounded-md shadow-md">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg" class="w-5 h-5 mb-1">
+          <span class="text-xs">PyTorch</span>
+        </div>
+
+        <div class="p-2 flex flex-col items-center bg-gray-800 text-white rounded-md shadow-md">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" class="w-5 h-5 mb-1">
+          <span class="text-xs">TensorFlow</span>
+        </div>
+      </div> -->
+    
     <!-- Publications -->
     <section id="publications" class="mt-12">
       <h2 class="text-2xl font-semibold mt-12 mb-6 text-center">📚 Publications 📚</h2>
@@ -93,23 +118,35 @@ const { name, avatar, resumeLink, publications, projects } = profileData
         {projects
           .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
           .map((proj) => (
-            <li class="border-b border-gray-300 pb-4">
-              <h3 class="text-lg font-semibold">{proj.title}</h3>
-              {proj.date && (
-                <p class="text-xs text-gray-500 mt-1">{new Date(proj.date).toLocaleDateString()}</p>
+            <li class={`border-b border-gray-300 pb-4 flex ${proj.image ? "items-start space-x-4" : "flex-col"}`}>
+              <!-- Square Image (Only If Exists) -->
+              {proj.image && (
+                <img 
+                  src={proj.image} 
+                  alt={`Thumbnail for ${proj.title}`} 
+                  class="w-[5lh] h-[5lh] object-cover rounded-md shadow-md"
+                />
               )}
-              <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">{proj.description}</p>
-              <div class="flex space-x-4 mt-2">
-                {proj.pdf && (
-                  <a href={proj.pdf} target="_blank" class="text-blue-500 text-sm hover:underline">
-                    📄 PDF
-                  </a>
+
+              <!-- Project Content -->
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold">{proj.title}</h3>
+                {proj.date && (
+                  <p class="text-xs text-gray-500 mt-1">{new Date(proj.date).toLocaleDateString()}</p>
                 )}
-                {proj.github && (
-                  <a href={proj.github} target="_blank" class="text-blue-500 text-sm hover:underline">
-                    🔗 GitHub
-                  </a>
-                )}
+                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">{proj.description}</p>
+                <div class="flex space-x-4 mt-2">
+                  {proj.pdf && (
+                    <a href={proj.pdf} target="_blank" class="text-blue-500 text-sm hover:underline">
+                      📄 PDF
+                    </a>
+                  )}
+                  {proj.github && (
+                    <a href={proj.github} target="_blank" class="text-blue-500 text-sm hover:underline">
+                      🔗 GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             </li>
           ))}

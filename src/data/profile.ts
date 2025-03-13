@@ -13,6 +13,7 @@ interface Projects {
   pdf: string | undefined
   github: string | undefined
   date: string
+  image: string | undefined
 }
 
 interface ProfileData {
@@ -52,7 +53,8 @@ export const profileData: ProfileData = {
       keywords: "LLM, RAG, Qdrant",
       pdf: undefined,
       github: undefined,
-      date: "2025-01-10"
+      date: "2025-01-10",
+      image: "/media/images/projects/gradrag.png"
     },
     {
       title: "Improving State Space Models for Computer Vision",
@@ -60,7 +62,8 @@ export const profileData: ProfileData = {
       keywords: "State Space Models, Vision Mamba, MambaVision, Model Optimization",
       pdf: "/media/pdf/Improving_State_Space_Models_for_Computer_Vision.pdf",
       github: "https://github.com/rdaggs/vim_ssm_cv24",
-      date: "2024-12-20"
+      date: "2024-12-20",
+      image: "/media/images/projects/mamba.png"
     },
     {
       title: "HiveCluster: Strategic Stock Portfolio Construction",
@@ -68,7 +71,8 @@ export const profileData: ProfileData = {
       keywords: "Predictive Analytics, Machine Learning, Stock Market, Market Leaders, Portfolio, Hedge Fund Alpha, Lead-lag Relationship, Clustering",
       pdf: "/media/pdf/HiveCluster-Strategic_Stock_Portfolio_Construction.pdf",
       github: undefined,
-      date: "2024-12-24"
+      date: "2024-12-24",
+      image: "/media/images/projects/hivecluster.png"
     },
     {
       title: "Regression with Text Features: an Experimental Approach Evaluated on Real-World Applications",
@@ -76,7 +80,8 @@ export const profileData: ProfileData = {
       keywords: "Text regression, Embeddings, TF-IDF, SVR, MLP, LLM, BERT",
       pdf: "/media/pdf/Regression_with_Text_Features.pdf",
       github: "https://github.com/apeterson7/cs2565-project",
-      date: "2024-12-13"
+      date: "2024-12-13",
+      image: "/media/images/projects/textregression.png"
     },
     {
       title: "Exploring NeRF: Project Report",
@@ -84,7 +89,8 @@ export const profileData: ProfileData = {
       keywords: "NeRF, 3D Reconstruction, Deep Learning, Computer Vision, Model Optimization",
       pdf: "/media/pdf/Exploring_NeRF-report.pdf",
       github: "https://github.com/lucas-oma/exploring_NeRF",
-      date: "2024-05-09"
+      date: "2024-05-09",
+      image: "/media/images/projects/nerf.png"
     },
     {
       title: "Hyperparameter tuning on LaVIN, an Efficient Vision-Language Instruction Tuning for Large Language Models",
@@ -92,7 +98,8 @@ export const profileData: ProfileData = {
       keywords: "Vision-language Models, Multimodal AI, LaVIN, LLaMA, Fine-tuning, LLM",
       pdf: undefined,
       github: "https://github.com/HyejunShin/LaVIN",
-      date: "2023-12-20"
+      date: "2023-12-20",
+      image: "/media/images/projects/lavin.png"
     }
   ]
 }
