@@ -17,21 +17,13 @@
         crossorigin="anonymous"
         async>
 </script> -->
-
-
 <script>
-    function updateGiscusTheme(event: CustomEvent<{ theme: string }>) {
-        const theme = event.detail.theme;
+    function renderGiscus(theme: String) {
         const giscusContainer = document.querySelector('.giscus');
 
         if (giscusContainer) {
-            // Remove existing iframe (forces re-render)
-            const iframe = giscusContainer.querySelector('iframe');
-            if (iframe) {
-                iframe.remove();
-            }
+            giscusContainer.innerHTML = ''; // Clear existing content
 
-            // Create a new Giscus script with the updated theme
             const giscusScript = document.createElement('script');
             giscusScript.setAttribute('src', 'https://giscus.app/client.js');
             giscusScript.setAttribute('data-repo', 'lucas-oma/lucas-oma.github.io');
@@ -43,27 +35,39 @@
             giscusScript.setAttribute('data-reactions-enabled', '1');
             giscusScript.setAttribute('data-emit-metadata', '0');
             giscusScript.setAttribute('data-input-position', 'bottom');
-            giscusScript.setAttribute('data-theme', theme == 'dark'? 'transparent_dark' : 'light');
+            giscusScript.setAttribute('data-theme', theme === 'dark' ? 'transparent_dark' : 'light');
             giscusScript.setAttribute('data-lang', 'en');
             giscusScript.setAttribute('data-loading', 'lazy');
             giscusScript.setAttribute('crossorigin', 'anonymous');
-            giscusScript.setAttribute('defaultCommentOrder', 'newest');
-            // giscusScript.setAttribute('async', '');
 
-            // Append the new script to the container
             giscusContainer.appendChild(giscusScript);
         }
     }
 
-    document.addEventListener('theme-change', (event) => updateGiscusTheme(event as CustomEvent<{ theme: string }>));
-
-    // Set the initial theme on load
-    function setInitialTheme() {
-        const isDark = document.documentElement.classList.contains('dark');
-        document.dispatchEvent(new CustomEvent('theme-change', { detail: { theme: isDark ? 'dark' : 'light' } }));
+    function getCurrentTheme() {
+        return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
     }
 
-    setInitialTheme();
+    function initGiscus() {
+        const theme = getCurrentTheme();
+        renderGiscus(theme);
+    }
+
+    // Initial load
+    initGiscus();
+
+    // When theme is changed
+    document.addEventListener('theme-change', (event) => {
+        const customEvent = event as CustomEvent<{ theme: string }>;
+        const theme = customEvent.detail.theme;
+        renderGiscus(theme);
+    });
+
+
+    // When navigating to a new route (Astro client routing)
+    document.addEventListener('astro:page-load', () => {
+        initGiscus();
+    });
 </script>
 
 
