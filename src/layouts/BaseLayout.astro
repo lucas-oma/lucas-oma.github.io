@@ -7,6 +7,10 @@ import ProviderAnimations from '@/components/ProviderAnimations'
 import TwSizeIndicator from '@/components/TwSizeIndicator'
 import EditBlog from '@/components/editBlog'
 const { title, description, image, articleDate } = Astro.props
+
+const isDev = import.meta.env.DEV;
+
+
 ---
 
 <html lang='en' class='scroll-smooth'>
@@ -17,6 +21,8 @@ const { title, description, image, articleDate } = Astro.props
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
 		<ProviderTheme />
 		<ProviderAnimations />
+
+		{!isDev && ( <script defer src="https://cloud.umami.is/script.js" data-website-id="706efd05-b47c-4863-9c99-1288c02cd7e8"></script> )}
 	</head>
 
 	<body class='bg-white text-stone-950 dark:bg-[#0a0910] dark:text-white'>
