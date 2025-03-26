@@ -8,9 +8,7 @@ const { url = "", margin="" } = Astro.props;
 
 const margin_class = margin=="r" ? 'ml-auto' : margin=='c' ? 'ml-auto mr-auto' : ''
 
-const formatUrl = url.endsWith("/") ? url : url + "/";
 const baseBackendUrl = import.meta.env.DEV ? "http://localhost:3000" : "https://lucas-oma-github-io-backend.vercel.app";
-const counterUrl = `${baseBackendUrl}/api/views?slug=${formatUrl}`;
 ---
 
 <div class="flex w-full">
@@ -54,7 +52,8 @@ const counterUrl = `${baseBackendUrl}/api/views?slug=${formatUrl}`;
   }
 </style>
 
-<script define:vars={{ counterUrl }}>
+<script define:vars={{ url, baseBackendUrl }}>
+
   function animateNumber(start, end, duration, element) {
     const startTime = performance.now();
     const startNumber = parseInt(start);
@@ -85,6 +84,9 @@ const counterUrl = `${baseBackendUrl}/api/views?slug=${formatUrl}`;
 
 
   async function updateViewCount() {
+    const formatUrl = url.endsWith("/") ? url : url + "/";
+    const counterUrl = `${baseBackendUrl}/api/views?slug=${formatUrl}`;
+
     const viewsCount = document.getElementById("views-count");
     if (!viewsCount) return;
 
@@ -101,8 +103,11 @@ const counterUrl = `${baseBackendUrl}/api/views?slug=${formatUrl}`;
     }
   }
 
-  updateViewCount();
-  document.addEventListener("astro:after-swap", () => {
+  // updateViewCount();
+  let hasRun = false;
+  document.addEventListener("astro:page-load", () => {
+    if (hasRun) return;
+    hasRun = true;
     updateViewCount();
   });
 </script>
