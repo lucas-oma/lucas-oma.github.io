@@ -41,21 +41,26 @@ const isDev = import.meta.env.DEV;
 			}
 		</style>
 
-
-	{!isDev && (
-		<script>
-			declare global {
-				interface Window {
-					umami?: {
-					track: () => void;
-					};
-				}
+	<script>
+		declare global {
+			interface Window {
+				umami?: {
+				track: () => void;
+				};
 			}
+		}
 
-		document.addEventListener('astro:after-swap', () => {
+		async function umamiTrack() {
 			window.umami?.track();
+		}
+	
+		// umamiTrack();
+		document.addEventListener("astro:page-load", () => {
+			umamiTrack();
 		});
-		</script>
-	)}
+	</script>
+
+
+
 	</body>
 </html>
