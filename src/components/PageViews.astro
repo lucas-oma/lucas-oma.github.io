@@ -89,7 +89,6 @@ const counterUrl = `${baseBackendUrl}/api/views?slug=${formatUrl}`;
     if (!viewsCount) return;
 
     try {
-      window.alert(counterUrl);
       const res = await fetch(counterUrl);
       const data = await res.json();
       if (typeof data.views === "number") {
