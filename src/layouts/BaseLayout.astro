@@ -22,7 +22,7 @@ const isDev = import.meta.env.DEV;
 		<ProviderTheme />
 		<ProviderAnimations />
 
-		{!isDev && ( <script defer src="https://cloud.umami.is/script.js" data-website-id="706efd05-b47c-4863-9c99-1288c02cd7e8"></script> )}
+		{!isDev && ( <script defer data-astro-rerun src="https://cloud.umami.is/script.js" data-website-id="706efd05-b47c-4863-9c99-1288c02cd7e8"></script> )}
 	</head>
 
 	<body class='bg-white text-stone-950 dark:bg-[#0a0910] dark:text-white'>
@@ -41,7 +41,9 @@ const isDev = import.meta.env.DEV;
 			}
 		</style>
 
-	<script>
+
+
+	<!-- <script>
 		declare global {
 			interface Window {
 				umami?: {
@@ -58,7 +60,7 @@ const isDev = import.meta.env.DEV;
 		document.addEventListener("astro:page-load", () => {
 			umamiTrack();
 		});
-	</script>
+	</script> -->
 
 
 
