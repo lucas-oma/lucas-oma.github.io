@@ -42,5 +42,20 @@ const isDev = import.meta.env.DEV;
 		</style>
 
 
+	{!isDev && (
+		<script>
+			declare global {
+				interface Window {
+					umami?: {
+					track: () => void;
+					};
+				}
+			}
+
+		document.addEventListener('astro:after-swap', () => {
+			window.umami?.track();
+		});
+		</script>
+	)}
 	</body>
 </html>
