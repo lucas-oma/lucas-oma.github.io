@@ -4,6 +4,5 @@ export const CATEGORIES = [
 	'Practical',
 	'GPU stuff',
 	'Discussions',
-	'Other',
-	'Coming Soon'
+	'Other'
 ] as const
