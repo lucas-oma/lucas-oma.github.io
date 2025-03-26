@@ -94,7 +94,7 @@ const baseBackendUrl = import.meta.env.DEV ? "http://localhost:3000" : "https://
       const res = await fetch(counterUrl);
       const data = await res.json();
       if (typeof data.views === "number") {
-        animateNumber(0, data.views, 1000, viewsCount);
+        animateNumber(0, data.views + 1, 1000, viewsCount);
       } else {
         viewsCount.textContent = "N/A";
       }
