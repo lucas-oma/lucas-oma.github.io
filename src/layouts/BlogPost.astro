@@ -8,7 +8,7 @@ import { Image } from 'astro:assets'
 import CommentSection from '@/components/CommentSection'
 import PageViews from '@/components/PageViews'
 
-const pageUrl = new URL(Astro.url.pathname, Astro.url.origin).href;
+const pageUrl = Astro.url.pathname;
 
 type Props = {
 	id: CollectionEntry<'blog'>['id']

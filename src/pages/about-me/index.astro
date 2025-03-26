@@ -4,7 +4,7 @@ import { profileData } from '@/data/profile'
 import { SOCIALNETWORKS } from '@/data/links'
 import PageViews from '@/components/PageViews'
 
-const pageUrl = new URL(Astro.url.pathname, Astro.url.origin).href;
+const pageUrl = Astro.url.pathname;
 
 const { name, avatar, resumeLink, publications, projects } = profileData
 ---
