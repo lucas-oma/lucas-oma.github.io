@@ -1,6 +1,7 @@
 ---
 import { siteConfig } from '@/data/site.config'
-import TwitterColorIcon from './icons/TwitterColorIcon.astro'
+import XColorIcon from './icons/XColorIcon.astro'
+import XAltColorIcon from './icons/XAltColorIcon.astro'
 import LinkedinColorIcon from './icons/LinkedinColorIcon.astro'
 const message = siteConfig.shareMessage
 
@@ -13,9 +14,16 @@ const path = Astro.url.pathname
 	<ul class='flex gap-3 text-black dark:text-white'>
 		<li>
 			<a
-				target="_blank" rel="noopener noreferrer" data-umami-event=`shareTwitter_${path}`
+				target="_blank" rel="noopener noreferrer" data-umami-event=`shareX_${path}`
 				href={`https://twitter.com/intent/tweet?text=${message + ' ' + URL}`}
-				aria-label='Share on Twitter'><TwitterColorIcon /></a
+				aria-label='Share on X'>
+					<span id="light-x-icon" style="display: none;">
+						<XColorIcon  />
+					</span>
+					<span id="dark-x-icon" style="display: none;">
+						<XAltColorIcon />
+				  </span>
+				</a
 			>
 		</li>
 		<li>
@@ -29,3 +37,31 @@ const path = Astro.url.pathname
 		</li>
 	</ul>
 </div>
+
+
+<script>
+	function updateXIconVisibility() {
+	  const isDark = document.documentElement.classList.contains('dark');
+	  const lightIcon = document.getElementById('light-x-icon');
+	  const darkIcon = document.getElementById('dark-x-icon');
+  
+	  if (lightIcon && darkIcon) {
+		lightIcon.style.display = isDark ? 'none' : 'block';
+		darkIcon.style.display = isDark ? 'block' : 'none';
+	  }
+	}
+  
+	// Initial render
+	updateXIconVisibility();
+  
+	// When theme is toggled (you already emit this event)
+	document.addEventListener('theme-change', () => {
+	  updateXIconVisibility();
+	});
+  
+	// Astro navigation reload
+	document.addEventListener('astro:page-load', () => {
+	  updateXIconVisibility();
+	});
+  </script>
+  
