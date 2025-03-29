@@ -18,6 +18,6 @@ export const siteConfig: SiteConfig = {
 	description: 'Machine learning and deep learning explained with clarity - easy to understand. Covering Vision, attention, Transformers, neural networks, and the math behind modern AI models.', // Description to display in the meta tags
 	lang: 'en-US',
 	ogLocale: 'en_US',
-	shareMessage: 'Share this post', // Message to share a post on social media
+	shareMessage: 'Check this out:', // Message to share a post on social media
 	paginationSize: 6 // Number of posts per page
 }
