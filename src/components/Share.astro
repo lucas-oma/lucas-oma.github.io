@@ -7,6 +7,7 @@ const message = siteConfig.shareMessage
 
 const URL = Astro.url.href
 const path = Astro.url.pathname
+const { text } = Astro.props
 ---
 
 <div class='flex flex-col gap-2'>
@@ -15,7 +16,8 @@ const path = Astro.url.pathname
 		<li>
 			<a
 				target="_blank" rel="noopener noreferrer" data-umami-event=`shareX_${path}`
-				href={`https://x.com/intent/post?text=${message + ' ' + URL}`}
+				href={`https://x.com/intent/post?text=${message}%0A${text}%20•%20${siteConfig.title}&url=${URL}`}
+
 				aria-label='Share on X'>
 					<span id="light-x-icon" style="display: none;">
 						<XColorIcon  />
@@ -23,8 +25,7 @@ const path = Astro.url.pathname
 					<span id="dark-x-icon" style="display: none;">
 						<XAltColorIcon />
 				  </span>
-				</a
-			>
+			</a>
 		</li>
 		<li>
 			<a
