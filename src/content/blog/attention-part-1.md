@@ -85,6 +85,9 @@ $$
 $$
 
 **WATCH OUT! A wild Pokémon appeared!**  
+
+![wild pokemon appeared](../../assets/images/theory/attention1/wild_term.png)
+
 Okay, not a Pokémon — but a new term (close enough): $\sqrt{d_k}$
 
 This is the **scaling factor** and was introduced in the original Transformer paper years later: [Vaswani et al., 2017](https://arxiv.org/abs/1706.03762).
