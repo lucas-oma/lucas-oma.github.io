@@ -13,14 +13,14 @@ const path = Astro.url.pathname
 	<ul class='flex gap-3 text-black dark:text-white'>
 		<li>
 			<a
-				target="_blank" rel="noopener noreferrer" data-umami-event=`shareTwitter_${path}``
+				target="_blank" rel="noopener noreferrer" data-umami-event=`shareTwitter_${path}`
 				href={`https://twitter.com/intent/tweet?text=${message + ' ' + URL}`}
 				aria-label='Share on Twitter'><TwitterColorIcon /></a
 			>
 		</li>
 		<li>
 			<a
-				target="_blank" rel="noopener noreferrer"  data-umami-event=`shareLinkedIn_${path}``
+				target="_blank" rel="noopener noreferrer"  data-umami-event=`shareLinkedIn_${path}`
 				href={`https://www.linkedin.com/shareArticle?mini=true&url=${URL}`}
 				aria-label='Share on LinkedIn'
 			>
