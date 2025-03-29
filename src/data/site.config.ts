@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
 	author: 'Lucas O. Martínez', // Site author
 	shortName: 'Lucas M.',
 	title: 'The Backprop Blog', // Site title.
-	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // Description to display in the meta tags
+	description: 'Machine learning and deep learning explained with clarity - easy to understand. Covering Vision, attention, Transformers, neural networks, and the math behind modern AI models.', // Description to display in the meta tags
 	lang: 'en-US',
 	ogLocale: 'en_US',
 	shareMessage: 'Share this post', // Message to share a post on social media
