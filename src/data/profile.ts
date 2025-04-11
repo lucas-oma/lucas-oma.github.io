@@ -48,6 +48,15 @@ export const profileData: ProfileData = {
 
   projects: [
     {
+      title: "JobRAG",
+      description: "A full-stack Retrieval-Augmented Generation (RAG) platform that helps users discover job opportunities by querying vector-embedded job descriptions stored in Qdrant. Includes a scraping pipeline, LLM-powered description extraction, and a modern Next.js frontend.",
+      keywords: "LLM, RAG, Qdrant, FastAPI, Next.js",
+      pdf: undefined,
+      github: "https://job-rag.vercel.app",
+      date: "2025-04-11",
+      image: "/media/images/projects/jobrag.png"
+    },
+    {
       title: "GradRag LLM",
       description: "A Retrieval-Augmented Generation (RAG) application for PhD aspirants to search professors using embeddings and vector-based similarity.",
       keywords: "LLM, RAG, Qdrant",
