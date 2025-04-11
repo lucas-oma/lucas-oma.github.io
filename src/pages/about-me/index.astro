@@ -42,7 +42,7 @@ const { name, avatar, resumeLink, publications, projects } = profileData
       <h1 class="text-3xl font-bold">{name}</h1>
       <p class="text-sm text-gray-500 dark:text-gray-400">M.S. in Computer Science, AI Concentration - New York University, Courant</p>
       <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mt-2">
-      I'm an AI enthusiast 🤖 who enjoys solving complex problems, exploring how things work, and creating efficient solutions. Whether I’m experimenting with AI models, researching new ideas, optimizing code, or contributing to open-source projects, I enjoy pushing boundaries and constantly learning.
+      I'm an AI enthusiast 🤖 who enjoys solving complex problems, exploring how things work, and creating efficient solutions. Whether I'm experimenting with AI models, researching new ideas, optimizing code, or contributing to open-source projects, I enjoy pushing boundaries and constantly learning.
       </p>
 
       <!-- Social Links -->
@@ -138,6 +138,12 @@ const { name, avatar, resumeLink, publications, projects } = profileData
                 )}
                 <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">{proj.description}</p>
                 <div class="flex space-x-4 mt-2">
+                  {proj.website && (
+                    <a href={proj.website} target="_blank" class="text-blue-500 text-sm hover:underline"
+                    data-umami-event={`WEBSITE_project_${proj.title}`}>
+                      🌐 Website
+                    </a>
+                  )}
                   {proj.pdf && (
                     <a href={proj.pdf} target="_blank" class="text-blue-500 text-sm hover:underline"
                     data-umami-event={`PDF_project_${proj.title}`}>

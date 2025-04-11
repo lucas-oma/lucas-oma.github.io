@@ -12,6 +12,7 @@ interface Projects {
   keywords: string
   pdf: string | undefined
   github: string | undefined
+  website: string | undefined
   date: string
   image: string | undefined
 }
@@ -52,7 +53,8 @@ export const profileData: ProfileData = {
       description: "A full-stack Retrieval-Augmented Generation (RAG) platform that helps users discover job opportunities by querying vector-embedded job descriptions stored in Qdrant. Includes a scraping pipeline, LLM-powered description extraction, and a modern Next.js frontend.",
       keywords: "LLM, RAG, Qdrant, FastAPI, Next.js",
       pdf: undefined,
-      github: "https://job-rag.vercel.app",
+      github: undefined,
+      website: "https://job-rag.vercel.app",
       date: "2025-04-11",
       image: "/media/images/projects/jobrag.png"
     },
@@ -62,6 +64,7 @@ export const profileData: ProfileData = {
       keywords: "LLM, RAG, Qdrant",
       pdf: undefined,
       github: undefined,
+      website: undefined,
       date: "2025-01-10",
       image: "/media/images/projects/gradrag.png"
     },
@@ -71,6 +74,7 @@ export const profileData: ProfileData = {
       keywords: "State Space Models, Vision Mamba, MambaVision, Model Optimization",
       pdf: "/media/pdf/Improving_State_Space_Models_for_Computer_Vision.pdf",
       github: "https://github.com/rdaggs/vim_ssm_cv24",
+      website: undefined,
       date: "2024-12-20",
       image: "/media/images/projects/mamba.png"
     },
@@ -80,6 +84,7 @@ export const profileData: ProfileData = {
       keywords: "Predictive Analytics, Machine Learning, Stock Market, Market Leaders, Portfolio, Hedge Fund Alpha, Lead-lag Relationship, Clustering",
       pdf: "/media/pdf/HiveCluster-Strategic_Stock_Portfolio_Construction.pdf",
       github: undefined,
+      website: undefined,
       date: "2024-12-24",
       image: "/media/images/projects/hivecluster.png"
     },
@@ -89,6 +94,7 @@ export const profileData: ProfileData = {
       keywords: "Text regression, Embeddings, TF-IDF, SVR, MLP, LLM, BERT",
       pdf: "/media/pdf/Regression_with_Text_Features.pdf",
       github: "https://github.com/apeterson7/cs2565-project",
+      website: undefined,
       date: "2024-12-13",
       image: "/media/images/projects/textregression.png"
     },
@@ -98,6 +104,7 @@ export const profileData: ProfileData = {
       keywords: "NeRF, 3D Reconstruction, Deep Learning, Computer Vision, Model Optimization",
       pdf: "/media/pdf/Exploring_NeRF-report.pdf",
       github: "https://github.com/lucas-oma/exploring_NeRF",
+      website: undefined,
       date: "2024-05-09",
       image: "/media/images/projects/nerf.png"
     },
@@ -107,6 +114,7 @@ export const profileData: ProfileData = {
       keywords: "Vision-language Models, Multimodal AI, LaVIN, LLaMA, Fine-tuning, LLM",
       pdf: undefined,
       github: "https://github.com/HyejunShin/LaVIN",
+      website: undefined,
       date: "2023-12-20",
       image: "/media/images/projects/lavin.png"
     }
