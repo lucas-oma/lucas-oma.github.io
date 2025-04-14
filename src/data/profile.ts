@@ -49,6 +49,16 @@ export const profileData: ProfileData = {
 
   projects: [
     {
+      title: "Duplicate Job-posts Detection System",
+      description: "A real-time FastAPI system to detect semantically similar job posts using SentenceTransformers for embeddings and Milvus for vector similarity search. Includes threshold tuning, evaluation tools, and scalable batch processing.",
+      keywords: "Duplicate Detection, SentenceTransformers, Milvus, DiskANN, FastAPI, Vector Search, Embeddings",
+      pdf: undefined,
+      github: "https://github.com/lucas-oma/duplicated-jobs-detection",
+      website: undefined,
+      date: "2025-04-14",
+      image: "/media/images/projects/duplicatejobsdetection.png"
+    },
+    {
       title: "JobRAG",
       description: "A full-stack Retrieval-Augmented Generation (RAG) platform that helps users discover job opportunities by querying vector-embedded job descriptions stored in Qdrant. Includes a scraping pipeline, LLM-powered description extraction, and a modern Next.js frontend.",
       keywords: "LLM, RAG, Qdrant, FastAPI, Next.js",
