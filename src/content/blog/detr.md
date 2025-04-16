@@ -254,7 +254,7 @@ Where:
 
 For the predicted bounding boxes, DETR uses a combination of two losses:
 
-- **L1 loss** (which is essentially a "distance-based" loss): Measures how far off the predicted box coordinates (center) are from the true ones.
+- **L1 loss** (which is essentially a "distance-based" loss): Measures how far off the predicted box coordinates (xcerner + width and height) are from the true ones.
 
 > $$
 > \mathcal{L}_{\text{L1}} = \sum_{i} \left| b_i - \hat{b}_i \right|
@@ -264,7 +264,7 @@ For the predicted bounding boxes, DETR uses a combination of two losses:
 > - $ b = (x, y, w, h) $ is the ground-truth box  
 > - $ \hat{b} $ is the predicted box
 
-- **Generalized IoU (GIoU) loss**: Encourages better overlap between the predicted and true boxes, even when they don't intersect (aka. helps adjusting the box size).
+- **Generalized IoU (GIoU) loss**: Encourages better overlap between the predicted and true boxes, even when they don't intersect (aka. helps adjusting the box).
 
 > This combo ensures the boxes are both **precisely located** and **well-aligned** with the actual object shapes:
 > $$
