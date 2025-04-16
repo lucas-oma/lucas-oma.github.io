@@ -1,4 +1,4 @@
-# Welcome to the The Backprop Blog!
+# Welcome to the [The Backprop Blog!](https://lucas-oma.github.io)
 
 >  🧠 Lucas Martinez's AI & ML Blog
 
