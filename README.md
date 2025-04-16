@@ -11,7 +11,7 @@ This blog is written to help you understand, not just to tell. Each post aims to
 - ✨ **Transformers in Vision** — from DETR to DINO
 - 🔍 **Attention Mechanisms** — self-attention, multi-head, and beyond
 - 📐 **Classic CNNs** — explained clearly, with examples
-- 🚀 **And more** in comming! 
+- 🚀 **And more** in coming! 
 
 All written in Markdown + Astro, with math rendered using LaTeX and visuals to make the concepts click.
 
