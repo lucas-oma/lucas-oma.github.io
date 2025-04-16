@@ -101,7 +101,7 @@ In short:
 
 > We also add the positional encodings — a key ingredient for Transformers, since they don't inherently understand spatial structure.
 
-2. We pass them into a transformer decoder-encoder to find the objects.
+2. We pass them into a transformer encoder-decoder to find the objects.
 
 3. Use FeedForward Networks to classify the objects (i.e. labels) and shape the bounding box.
 
