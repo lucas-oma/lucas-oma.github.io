@@ -40,4 +40,6 @@ Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/lucas-martinez
 
 ---
 
-Made with ❤️ and lots of late-night coffee ☕️.
+Made with ❤️ and lots of late-night coffee ☕️
+
+<img src="public/media/images/lannister.jpg" alt="I drink and I know things" width="200" />
