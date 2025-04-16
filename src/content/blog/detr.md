@@ -12,7 +12,7 @@ tags:
   - Object Detection
 ---
 
-# Why DETR?
+## Why DETR?
 
 Traditional object detection models like Faster R-CNN, YOLO, and SSD have undeniably pushed the field forward, delivering high accuracy and fast inference. But under the hood, they rely on a patchwork of heuristics and specialized components to fix the *noisy-ish* output:
 
