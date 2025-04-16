@@ -122,8 +122,8 @@ DETR then flattens this feature map and runs a linear projection to turn each ve
 
 > **Why flatten it?** Great question.
 >
-> The CNN outputs a 2D feature map (e.g., shape: 2048 $\cross$ 16 $\cross$ 16), but Transformers don't process 2D grids. They expect a sequence of tokens.
-> So we (DETR) flatten the 16 $\cross$ 16 spatial grid into 256 tokens, each of 2048 dims, and then project them into 256-d embeddings. Now it fits what the Transformer expects!
+> The CNN outputs a 2D feature map (e.g., shape: 2048 $\times$ 16 $\times$ 16), but Transformers don't process 2D grids. They expect a sequence of tokens.
+> So we (DETR) flatten the 16 $\times$ 16 spatial grid into 256 tokens, each of 2048 dims, and then project them into 256-d embeddings. Now it fits what the Transformer expects!
 
 
 **So the backbone's job?**
