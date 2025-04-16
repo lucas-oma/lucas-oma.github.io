@@ -1,5 +1,5 @@
 ---
-title: "Object Detection + Transformers: Understanding DETR"
+title: "Understanding DETR: Object Detection + Transformers"
 description: >-
   Dive into DETR — the revolutionary model that brings end-to-end object detection into the Transformer era. We'll break down how it works, why it matters, and what makes it different from traditional detection models.
 pubDate: 2025-04-15T00:00:00.000Z
