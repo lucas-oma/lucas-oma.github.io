@@ -9,6 +9,7 @@ tags:
   - Deep Learning
   - Computer Vision
   - CNN
+  - Skip Connections
 ---
 
 # ResNet: Deep Networks Without the Vanishing Gradient Problem

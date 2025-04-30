@@ -30,7 +30,7 @@ So… **what if we could throw all of that out?**
 
 What if we treated **object detection as a direct prediction problem,** like image classification — but instead of predicting a single label, **we predict a set of objects,** each with its class and bounding box?
 
-That's the core idea behind DETR (short for **DE**tection **TR**ansformer), presented by [Carion et al., 2020](https://arxiv.org/abs/2005.12872). It reframes object detection as a set prediction task and uses a Transformer encoder-decoder architecture to learn how to do it end-to-end, without any of the traditional detection-specific hacks.
+That's the core idea behind DETR (short for **DE**tection **TR**ansformer), presented by <a  target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2005.12872">Carion et al., 2020</a>. It reframes object detection as a set prediction task and uses a Transformer encoder-decoder architecture to learn how to do it end-to-end, without any of the traditional detection-specific hacks.
 
 No anchors.
 
@@ -330,7 +330,7 @@ While DETR made a bold entrance with its clean, end-to-end architecture, it came
 Let's meet a few of the most important DETR variants:
 
 
-### 1. Deformable DETR ([Zhu et al., 2020](https://arxiv.org/abs/2010.04159))
+### 1. Deformable DETR (<a  target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2010.04159">Zhu et al., 2020</a>)
 
 > *“Let's make the attention more efficient and smarter.”*
 
@@ -343,7 +343,7 @@ Let's meet a few of the most important DETR variants:
     - AP: ~46.2 (vs 42.0 for original DETR, same ResNet-50 backbone)
 
 
-### 2. Conditional DETR ([Meng et al., 2021](https://arxiv.org/abs/2108.06152))
+### 2. Conditional DETR (<a  target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2108.06152">Meng et al., 2021</a>)
 
 > *“Let's make the object queries more focused from the start.”*
 
@@ -352,7 +352,7 @@ Let's meet a few of the most important DETR variants:
 - Helps improve convergence and performance without major architectural changes.
 
 
-### 3. DAB-DETR & DN-DETR ([Liu et al., 2022](https://arxiv.org/abs/2201.12329) & [Li et al., 2022](https://arxiv.org/abs/2203.01305))
+### 3. DAB-DETR & DN-DETR (<a  target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2201.12329">Liu et al., 2022</a> & <a  target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2203.01305">Li et al., 2022</a>)
 
 > *“Let's add structure and noise to teach the model more effectively.”*
 
@@ -363,7 +363,7 @@ Let's meet a few of the most important DETR variants:
 Both versions reduce training time and improve stability!
 
 
-### 4. DINO ([Zhang et al., 2022](https://arxiv.org/abs/2203.03605))
+### 4. DINO (<a  target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2203.03605">Zhang et al., 2022</a>)
 
 > *“The ultimate DETR booster.”*
 
