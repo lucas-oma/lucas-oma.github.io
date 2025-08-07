@@ -49,6 +49,16 @@ export const profileData: ProfileData = {
 
   projects: [
     {
+      title: "Propi - Property Management & Financial System",
+      description: "A comprehensive React/TypeScript SaaS platform for property management with automated invoice processing, AI-powered document analysis using Mistral OCR and Gemini AI, real-time payment tracking, and integrated WhatsApp notifications. Features multi-currency support, tax calculations, and automated tenant communication workflows.",
+      keywords: "Property Management, AI Document Processing, Mistral OCR, Gemini AI, React TypeScript, Supabase, WhatsApp Integration, Multi-currency, Tax Calculations, SaaS",
+      pdf: undefined,
+      github: undefined,
+      website: "https://www.getpropi.com",
+      date: "2025-05-20",
+      image: "/media/images/projects/propi.png"
+    },
+    {
       title: "Duplicate Job-posts Detection System",
       description: "A real-time FastAPI system to detect semantically similar job posts using SentenceTransformers for embeddings and Milvus for vector similarity search. Includes threshold tuning, evaluation tools, and scalable batch processing.",
       keywords: "Duplicate Detection, SentenceTransformers, Milvus, DiskANN, FastAPI, Vector Search, Embeddings",
