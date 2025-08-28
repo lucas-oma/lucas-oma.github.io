@@ -55,7 +55,7 @@ export const profileData: ProfileData = {
       pdf: undefined,
       github: "https://github.com/lucas-oma/fantastic-router",
       website: undefined,
-      date: "2024-08-19",
+      date: "2025-08-15",
       image: "/media/images/projects/fantastic-router.png"
     },
     {
@@ -65,7 +65,7 @@ export const profileData: ProfileData = {
       pdf: undefined,
       github: "https://github.com/lucas-oma/vectorDB_from_scratch",
       website: undefined,
-      date: "2024-08-15",
+      date: "2025-08-19",
       image: "/media/images/projects/vectordbfromscratch.png"
     },
     {
