@@ -49,6 +49,26 @@ export const profileData: ProfileData = {
 
   projects: [
     {
+      title: "Fantastic Router",
+      description: "A natural-language routing engine that allows users to navigate complex applications using plain queries like “show me James Smith's monthly income.” Maps free-form text directly to structured routes (e.g., /landlords/james-smith-123/financials). Designed with extensibility in mind, supporting pluggable adapters for databases, LLM providers, and vector stores, and built-in role-based access control (RBAC).",
+      keywords: "Natural Language Interface, Routing Engine, LLM Integration, Vector Search, Extensible Framework, RBAC",
+      pdf: undefined,
+      github: "https://github.com/lucas-oma/fantastic-router",
+      website: undefined,
+      date: "2024-08-19",
+      image: "/media/images/projects/fantastic-router.png"
+    },
+    {
+      title: "VectorDB from Scratch",
+      description: "A from-scratch vector database with a REST API and MongoDB persistence. Supports exact (Flat) and approximate indexes (IVF, LSH SimHash), k-NN search, document/chunk management, and Postman-tested workflows.",
+      keywords: "Vector Database, ANN, IVF, LSH, Similarity Search, k-NN, Embeddings, FastAPI, MongoDB",
+      pdf: undefined,
+      github: "https://github.com/lucas-oma/vectorDB_from_scratch",
+      website: undefined,
+      date: "2024-08-15",
+      image: "/media/images/projects/vectordbfromscratch.png"
+    },
+    {
       title: "Propi - Property Management & Financial System",
       description: "A comprehensive React/TypeScript SaaS platform for property management with automated invoice processing, AI-powered document analysis using Mistral OCR and Gemini AI, real-time payment tracking, and integrated WhatsApp notifications. Features multi-currency support, tax calculations, and automated tenant communication workflows.",
       keywords: "Property Management, AI Document Processing, Mistral OCR, Gemini AI, React TypeScript, Supabase, WhatsApp Integration, Multi-currency, Tax Calculations, SaaS",
